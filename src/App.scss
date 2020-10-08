@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gugi&display=swap');
+body{
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding :0;
+  display: flex;
+  margin-right: 15px;
+  & li{
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+@mixin centerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*******MainHeader*******/
+header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+}
+.logo{
+  margin-left: 22px;
+  font-family: 'Gugi', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+/*******MainWelcome*******/
+.MainWelcome{
+  background-color: white;
+  width: 100%;
+  /*background-image: url("pngwing.com.png");
+  background-repeat: no-repeat;
+  background: cover;*/
+  height: calc( 100vh - 50px );
+  background-position: right center;
+  @include centerBox();
+  &-contents{
+    width: 940px;
+    margin-left: 22px;
+  }
+  & button{
+    margin-top: 10px;
+    background: #00c4cc;
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  & .Typist{
+    display: inline;
+    color: black;
+  }
+  & b{
+    color: #00c4cc;
+  }
+}
+/****MainFooter****/
+footer{
+  background: #2b2d2e;
+  height: 200px;
+}
+/****MainCounter****/
+.CounterLine{
+  &L{
+    border-radius: 0px 0px 240px 0px;
+    height: 60px;
+    width: 40%;
+    background: linear-gradient( to left, #00c4cc, #a9ffd0);
+  }
+  &R{
+    margin-left: auto;
+    border-radius: 0px 0px 0px 240px;
+    height: 60px;
+    width: 40%;
+    background: linear-gradient( to right, #00c4cc, #a9ffd0);
+  }
+}
+.MainCounter{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.flexbox{
+  @include centerBox();
+  width: 100%;
+  height: 400px;
+  flex-direction: column;
+}
+.TotalUser{
+  &L{
+    text-align: left;
+    width: 100%;
+    @media ( max-width: 939px ) {
+      text-align: center;
+    }
+  }
+  &R{
+    text-align: right;
+    width: 100%;
+    @media ( max-width: 939px ) {
+      text-align: center;
+    }
+  }
+}
+.animated{
+  width: 98%;
+}
+/****LoginModal****/
+.modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.modal{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ModalLogin{
+  background: white;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  & input{
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    width: calc( 100% - 100px );
+    padding: 8px 16px;
+    margin: 0 100px;
+    margin-bottom: 10px;
+  }
+  & button{
+    width: 100%;
+    cursor: pointer;
+    border:none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    background: #00c4cc;
+    padding: 5px 10px;
+    font-weight: bold;
+  } 
+}
+.checkbox{
+  display: flex;
+  width: 100%;
+  margin-left: 70px;
+  margin-bottom: 10px;
+  align-items: center;
+  & input{
+    margin: 0;
+    width: 0;
+  }
+  & p{
+    font-size: 14px;
+  }
+}
+input[type="checkbox"] {
+  visibility: hidden;
+}
+label {
+  cursor: pointer;
+}
+input[type="checkbox"] + label:before {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  content: "\00a0";
+  display: inline-block;
+  font: 16px/1em sans-serif;
+  height: 16px;
+  margin: 0 .25em 0 0;
+  padding: 0;
+  vertical-align: top;
+  width: 16px;
+}
+input[type="checkbox"]:checked + label:before {
+  background: #00c4cc;
+  color: white;
+  content: "\2713";
+  text-align: center;
+}
+input[type="checkbox"]:checked + label:after {
+  font-weight: bold;
+}
+
+input[type="checkbox"]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
