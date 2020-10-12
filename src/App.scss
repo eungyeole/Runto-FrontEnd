@@ -5,17 +5,6 @@ body{
 p{
   margin: 0;
 }
-ul{
-  list-style: none;
-  margin: 0;
-  padding :0;
-  display: flex;
-  margin-right: 15px;
-  & li{
-    margin-left: 10px;
-    cursor: pointer;
-  }
-}
 @mixin centerBox {
   display: flex;
   justify-content: center;
@@ -31,6 +20,17 @@ header{
   align-items: center;
   border-bottom: 1px solid #eee;
   box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+  & ul{
+    list-style: none;
+    margin: 0;
+    padding :0;
+    display: flex;
+    margin-right: 15px;
+    & li{
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
 }
 .logo{
   margin-left: 22px;
@@ -43,11 +43,13 @@ header{
 .MainWelcome{
   background-color: white;
   width: 100%;
-  /*background-image: url("pngwing.com.png");
-  background-repeat: no-repeat;
-  background: cover;*/
+  @media ( min-width: 800px ) {
+    background-image: url("main.png");
+    background-repeat: no-repeat;
+    background: cover;
+    background-position: right center;
+  }
   height: calc( 100vh - 50px );
-  background-position: right center;
   @include centerBox();
   &-contents{
     width: 940px;
@@ -106,21 +108,22 @@ footer{
 .TotalUser{
   &L{
     text-align: left;
-    width: 100%;
+    width: 98%;
+    margin-left: 2%;
     @media ( max-width: 939px ) {
       text-align: center;
     }
   }
   &R{
     text-align: right;
-    width: 100%;
+    width: 98%;
     @media ( max-width: 939px ) {
       text-align: center;
     }
   }
 }
 .animated{
-  width: 98%;
+  width: 100%;
 }
 /****LoginModal****/
 .modal-overlay{

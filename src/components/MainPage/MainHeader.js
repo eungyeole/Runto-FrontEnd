@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import '../App.scss';
 import Login from './ModalLogin'
 
 function MainHeader() {
@@ -14,7 +13,7 @@ function MainHeader() {
         <>
             <Login isOpen={isOpen} close={close}></Login>
             <header>
-                <div className="logo">study</div>
+                <div className="logo">runto</div>
                 <ul>
                     <li onClick={open} >로그인</li>
                     <li>회원가입</li>
