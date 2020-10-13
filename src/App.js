@@ -10,7 +10,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={MainPage}></Route>
         <Route exact path="/glist" component={GListPage}></Route>
-        <Route exact path="/room" component={RoomPage}></Route>
+
+        <Route path="/room/:roomid" component={RoomPage}></Route>
       </Switch>
     </Router>
   );

@@ -11,7 +11,7 @@
 .tag{
     width: 100%;
     & a{
-        margin-top: 5px;
+        margin-bottom: 5px;
         padding: 3px 1.5em;
         margin-left: 1em;
         border-radius: 20px;
@@ -67,7 +67,7 @@
             }
             .desc-header{
                 padding: 20px 0;
-                max-height: 350px;
+                max-height: 310px;
                 overflow-y: scroll;
                 font-size: 13px;
             }
