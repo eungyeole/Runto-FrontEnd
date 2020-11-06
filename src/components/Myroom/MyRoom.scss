@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap');
+.rlist{
+    @media only screen and (max-width: 767px)
+    {
+        width: auto!important;
+        margin-left: 0.5em!important;
+        margin-right: 0.5em!important;
+    }
+    width: 1170px;
+    margin: 0 auto;
+}
+.myroom-header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: white;
+    height: 45px;
+    border: none;
+    align-items: center;
+    box-shadow: 0 0px 5px 2px rgba(0,0,0,.1);
+    .logo{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 19px;
+    }
+}
+.List{
+    margin-top: 50px;
+    & ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        & li{
+            margin-bottom: 10px;
+            .room-header{
+                padding: 10px 20px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                transition: 0.3s;
+                
+            }
+            .rlist-title{
+                font-weight: bold;
+                display: inline-block;
+                font-size: 14px;
+            }
+            .rlist-last{
+                font-size: 12px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box; 
+                -webkit-line-clamp: 1; 
+                -webkit-box-orient: vertical;
+            }
+            .rlist-header{
+                display: flex;
+                align-items: center;
+            }
+            .rlist-num{
+                margin-left: 5px;
+                font-size: 12px;
+                color: #00c4cc
+            }
+            .rlist-mamount{
+                background: #00c4cc;
+                color: white;
+                min-width: 35px;
+                text-align: center;
+                font-size: 13px;
+                padding: 5px 0;
+                border-radius: 30px;
+            }
+            .room-area{
+                margin-left: 10px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .room-info{
+                display: flex;
+                flex-direction: column;
+            }
+            .thumb{
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+                & img{
+                    background: #00c4cc;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

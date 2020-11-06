@@ -4,17 +4,126 @@
         width: auto!important;
         margin-left: 1em!important;
         margin-right: 1em!important;
+        margin-top: 65px;
     }
     width: 1170px;
     margin: 0 auto;
+    margin-top: 65px;
+}
+.glist{
+    &-modal{
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 30;   
+    }
+    &-write{
+        position: absolute;
+        height: 90%;
+        background: white;
+        width: 100%;
+        padding: 20px 0;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        z-index: 99;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        & input{
+            width: 80%;
+            border:none;
+            outline: none;
+            padding: 8px;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 10px;
+            transition: 0.2s;
+            &:focus{
+                border-bottom: 2px solid #00c4cc;
+            }
+        }
+        & button{
+            width: 80%;
+            outline: none;
+            border:none;
+            padding: 10px 0px;
+            border-radius: 20px;
+            background: #00c4cc;
+            color: white;
+        }
+        & div{
+            width: 80%;
+            & input{
+                float: right;
+                width: 40px;
+            }
+        }
+        & textarea{
+            height: 10%;
+            width: 80%;
+            outline: none;
+            resize: none;
+            border:none;
+            margin-bottom: 20px;
+            padding: 8px;
+            font-family: inherit;
+            border-top: 2px solid #eee;
+            border-bottom: 2px solid #eee;
+            &:focus{
+                border-top: 2px solid #00c4cc;
+                border-bottom: 2px solid #00c4cc; 
+            }
+        }
+    }
+    &-overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+    
+}
+.glist-header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: white;
+    height: 45px;
+    border: none;
+    align-items: center;
+    box-shadow: 0 0px 5px 2px rgba(0,0,0,.1);
+    .logo{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 19px;
+    }
+    .glist-plus{
+        margin-right: 20px;
+        cursor: pointer;
+        border-radius: 50%;
+        height: 30px;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+    }
 }
 .tag{
     width: 100%;
     & a{
         margin-bottom: 5px;
-        padding: 3px 1.5em;
+        padding: 5px 1em;
         margin-left: 1em;
         border-radius: 20px;
+        font-size: 14px;
         border: 1px solid #00c4cc; 
         display: inline-block;
         cursor: pointer;

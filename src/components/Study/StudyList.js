@@ -1,17 +1,15 @@
-import React from 'react';
-import Card from "./GListCard"
-function GListList() {
-    return (
+import React from "react"
+import Card from "./StudyCard"
+function StudyList(){
+    return(
         <div className="List">
-            <h5>스터디룸</h5>
-            <ul>
+            <ul className="SList">
                 <Card></Card>
                 <Card></Card>
                 <Card></Card>
                 <Card></Card>
             </ul>
         </div>
-    );
+    )
 }
-
-export default GListList;
+export default StudyList;
